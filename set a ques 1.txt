@@ -1,0 +1,25 @@
+
+#include<stdio.h>
+void func();
+int main()
+{
+    int i;
+    func();
+    for(i=0;i<3;i++){
+        func();
+    }
+    while(i<3){
+        func();
+        i++;
+    }
+    do{
+        func();
+        i++;
+    }while(i<3);
+}
+void func()
+{
+    static int a=4;
+    a=a+4;
+    printf("%d\n",a);
+}

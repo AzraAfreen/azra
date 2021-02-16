@@ -1,0 +1,55 @@
+
+#include<stdio.h>
+#include<string.h>
+struct emp
+{
+  char id[20];
+  char name[20];
+  char mobile[10];
+} employ[5];
+int
+main ()
+{
+  char sid[20];
+  char sname[20];
+  int i, flag = 0, sindex = 0;
+  printf ("enter details of employees");
+  for (i = 0; i < 1; i++)
+    {
+      scanf ("%s\n", employ[i].id);
+      scanf ("%s\n", employ[i].name);
+      scanf ("%s\n", employ[i].mobile);
+    }
+  for (i = 0; i < 1; i++)
+    {
+      printf ("%s\n", employ[i].id);
+      printf ("%s\n", employ[i].name);
+      printf ("%s\n", employ[i].mobile);
+
+    }
+  printf ("enter id of employee");
+  scanf ("%s\n", sid);
+  for (i = 0; i < 3; i++)
+    {
+      if (strcmp (sid, employ[i].id) == 0)
+	{
+	  flag = 1;
+	  sindex = i;
+	  printf ("enter new id and name");
+	  scanf ("%s\n", sid);
+	  scanf ("%s\n", sname);
+
+	  strcpy (sid, employ[i].id);
+	  strcpy (sname, employ[i].name);
+	  break;
+
+	}
+
+    }
+
+  if (flag == 0)
+    printf ("details updated");
+
+  else
+    printf ("employee not found");
+}

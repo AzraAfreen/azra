@@ -1,0 +1,22 @@
+
+#include<stdio.h>
+#include<string.h>
+struct book
+{
+    char title[20];
+    char author[20];
+    int price;
+    int pages;
+}b1;
+int main()
+{
+ strcpy(b1.title,"ignited minds");
+ strcpy(b1.author,"APJ Abdul Kalam");
+ b1.price=550;
+ b1.pages=300;
+ 
+ printf("%s\n",b1.title);
+ printf("%s\n",b1.author);
+ printf("%d\n",b1.price);
+ printf("%d\n",b1.pages);
+}
